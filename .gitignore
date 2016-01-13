@@ -1,0 +1,8 @@
+common/t10k-images-idx3-ubyte
+common/t10k-labels-idx1-ubyte
+common/train-images-idx3-ubyte
+common/train-labels-idx1-ubyte
+ex1/t10k-images-idx3-ubyte
+ex1/t10k-labels-idx1-ubyte
+ex1/train-images-idx3-ubyte
+ex1/train-labels-idx1-ubyte
