@@ -31,6 +31,17 @@ options = struct('MaxIter', 200);
 % We only use num_classes-1 columns, since the last column is always assumed 0.
 theta = rand(n,num_classes-1)*0.001;
 
+theta = [theta, zeros(n,1)];
+
+yCompare = full(sparse(train.y, 1:m, 1));
+e = exp(theta'*X);
+e_norm = sum(e, 1);
+E = bsxfun(@rdivide, e, e_norm);
+f = - yCompare(:)'*log(E(:));
+
+g = - X*(yCompare - E)';  
+g = g(:, 1:num_classes - 1); 
+
 % Call minFunc with the softmax_regression_vec.m file as objective.
 %
 % TODO:  Implement batch softmax regression in the softmax_regression_vec.m
