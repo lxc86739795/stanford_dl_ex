@@ -14,10 +14,10 @@
 
 % Configuration
 imageDim = 28;
-numClasses = 10;  % Number of classes (MNIST images fall into 10 classes)
 filterDim = 9;    % Filter size for conv layer
-numFilters = 20;   % Number of filters for conv layer
+numFilters = 20;  % Number of filters for conv layer
 poolDim = 2;      % Pooling dimension, (should divide imageDim-filterDim+1)
+numClasses = 10;  % Number of classes (MNIST images fall into 10 classes)
 
 % Load MNIST Train
 addpath ../common/;

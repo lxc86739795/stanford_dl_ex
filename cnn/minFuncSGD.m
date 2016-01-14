@@ -67,6 +67,8 @@ for e = 1:epochs
         % sgd update rule
         
         %%% YOUR CODE HERE %%%
+        velocity = mom.*velocity + alpha.*grad;
+        theta = theta - velocity;
         
         fprintf('Epoch %d: Cost on iteration %d is %f\n',e,it,cost);
     end;
